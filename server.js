@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+var forceSsl = require('force-ssl-heroku');
+app.use(forceSsl);
 const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'));
     
